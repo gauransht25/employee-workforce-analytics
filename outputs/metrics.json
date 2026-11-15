@@ -3,10 +3,10 @@
   "as_of": "2026-11-15",
   "raw_records": 22500,
   "invalid_age_records": 967,
-  "future_termination_records": 1951,
-  "clean_records": 19676,
-  "terminated_records": 5081,
-  "average_terminated_tenure_years": 5.67,
-  "largest_age_band": "45–54",
-  "highest_turnover_department": "Finance"
+  "future_termination_records": 1599,
+  "clean_records": 19934,
+  "terminated_records": 5370,
+  "average_terminated_tenure_years": 8.47,
+  "largest_age_band": "55+",
+  "highest_turnover_department": "Sales"
 }
