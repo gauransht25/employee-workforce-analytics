@@ -1,17 +1,57 @@
 # Employee Distribution | HR Analytics Dashboard
 
-An independent implementation of workforce analytics, inspired by the topics of [Tushar Aggarwal's Employee-Distribution](https://github.com/tushar2704/Employee-Distribution). Not a fork or a reproduction of the author's metrics.
+A comprehensive workforce analytics project that transforms employee records into actionable insights through data cleaning, SQL analysis, and interactive visualizations. Explore workforce demographics, departmental distribution, employee tenure, and termination patterns in a single dashboard.
 
-## Data provenance
-22,500 seeded **synthetic** HR records, with intentionally invalid ages and future-dated terminations for demonstrating data-quality checks. Results must not be represented as actual employer metrics.
+## Features
 
-## Run
+- Data cleaning and validation, including invalid ages and future-dated termination records
+- 11 PostgreSQL-compatible analytical queries covering workforce trends
+- Interactive Plotly dashboard with department, age, gender, location, and hiring visualizations
+- Reproducible Python pipeline with CSV and SQLite exports
+- Automated generation of datasets and dashboards through GitHub Actions
+
+## Technology Stack
+
+**Python**, **Pandas**, **NumPy**, **PostgreSQL-compatible SQL**, **SQLite**, **Plotly**, **GitHub Actions**
+
+## Dataset
+
+The project uses **22,500 reproducibly generated synthetic employee records**. The generator intentionally includes invalid ages and future termination dates to demonstrate data-quality checks. The records are not real company HR data.
+
+## Getting Started
+
 ```bash
+git clone https://github.com/gauransht25/employee-workforce-analytics.git
+cd employee-workforce-analytics
 pip install -r requirements.txt
+python generate_data.py
 python analyze.py
 ```
 
-## Deliverables
-Python cleaning and analysis pipeline, PostgreSQL-compatible SQL with 11 workforce questions, a self-contained Plotly HTML dashboard, and CSV/SQLite exports.
+Open `outputs/hr_dashboard.html` in a browser to explore the interactive dashboard.
 
-**Limitations:** HTML/Plotly dashboard, not a native Power BI PBIX. Termination share is not a formal period attrition rate.
+## Project Structure
+
+```text
+employee-workforce-analytics/
+├── analyze.py
+├── generate_data.py
+├── requirements.txt
+├── data/
+│   └── employees_synthetic.csv
+├── sql/
+│   └── postgresql_analysis.sql
+└── outputs/
+    ├── employees_clean.csv
+    ├── hr_dashboard.html
+    ├── hr_analytics.sqlite
+    └── metrics.json
+```
+
+## Analytics Covered
+
+Workforce composition by department, role, age band, gender, and location; hiring trends over time; department-level termination share; and employee tenure.
+
+## Notes
+
+The dashboard is an interactive Plotly HTML application rather than a Power BI `.pbix` file. Departmental termination share is descriptive and should not be interpreted as a formal period attrition rate.
